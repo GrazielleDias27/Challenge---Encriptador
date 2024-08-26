@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Decodificador de texto</title>
+    </head>
+    <body>
+        <div class="container__descricao">
+            <header>
+                <img class="LogoAlura" src="img/Vector.png" alt="LogoAlura">
+            </header>
+            <main>
+                <section> 
+                    <textarea name="text-area" class="text-area" id="text-area" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+                    <div class="informacao">
+                        <img class="atencao-img" src="img/img3.png" alt="Atencao">
+                        <h6>Apenas letras minúsculas e sem acento.</h6>
+                    </div> 
+                    <div class="botoes">
+                        <button type="button" class="btn-encriptar" value="Criptografar" onclick="btnEncriptar()">Criptografar</button>
+                        <input type="button" class="btn-desencriptar" value="Descriptografar" onclick="btnDesencriptar()"/>
+                        
+                    </div>
+                </section>
+            
+                <section>
+                    <div class="container">
+                        <img class="imagem" src="img/img2.jpg" alt="Boneco">
+                        <div class="container-encriptado">
+                            <h2 class="titulo">Nenhuma mensagem encontrada</h2>
+                            <p class="paragrafo">Digite um texto que deseja criptografar ou descriptografar.</p>
+                        </div>
+                    </div>
+                    <textarea name="mensagem" class="mensagem" id="mensagem" cols="30" rows="10" placeholder></textarea>
+                    <button class="btn-copiar" onclick="btnCopiarr()">Copiar</button>
+                </section>
+            </main>  
+        </div>
+        <footer class="rodape">
+            <p>&copy; Desenvolvido por Grazielle Dias 2024</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
