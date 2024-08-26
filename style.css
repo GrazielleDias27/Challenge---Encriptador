@@ -38,7 +38,6 @@ main{
     text-transform: lowercase;
 }
 
-
 .text-area::placeholder { 
  color: #0A3871; 
 }

@@ -5,40 +5,38 @@ const informacao = document.querySelector(".informacao");
 const containerEncriptado = document.querySelector(".container-encriptado");
 const tituloMensagem = document.querySelector(".container-encriptado h2");
 const paragrafoMensagem = document.querySelector(".container-encriptado p");
-const imagem = document.querySelector(".imagem"); // Seleciona a imagem do boneco
+const imagem = document.querySelector(".imagem"); 
 
-// Inicialmente, esconde o botão "Copiar"
 btnCopiar.style.display = "none";
 
 function btnEncriptar() {
-    // Detecta se a mensagem está criptografada
+    
     if (isEncrypted(textArea.value)) {
         const textoDesencriptado = desencriptar(textArea.value);
         if (textoDesencriptado) {
             mensagem.value = textoDesencriptado;
             textArea.value = "";
-            esconderElementosMensagem(); // Oculta elementos da mensagem
-            btnCopiar.style.display = "block"; // Mostra o botão "Copiar"
+            esconderElementosMensagem();
+            btnCopiar.style.display = "block"; 
         }
     } else {
         const textoEncriptado = encriptar(textArea.value);
         if (textoEncriptado) {
             mensagem.value = textoEncriptado;
             textArea.value = "";
-            esconderElementosMensagem(); // Oculta elementos da mensagem
-            btnCopiar.style.display = "block"; // Mostra o botão "Copiar"
+            esconderElementosMensagem();
+            btnCopiar.style.display = "block"; 
         }
     }
 }
 
 function btnDesencriptar() {
-    // Apenas desencripta o texto, sem tentar encriptar novamente
     const textoDesencriptado = desencriptar(mensagem.value);
     if (textoDesencriptado) {
         mensagem.value = textoDesencriptado;
         textArea.value = "";
-        esconderElementosMensagem(); // Oculta elementos da mensagem
-        btnCopiar.style.display = "block"; // Mostra o botão "Copiar"
+        esconderElementosMensagem(); 
+        btnCopiar.style.display = "block";
     }
 }
 
@@ -65,7 +63,7 @@ function desencriptar(stringDesencriptada) {
 }
 
 function isEncrypted(text) {
-    // Verifica se o texto contém padrões de criptografia
+    
     return text.includes("enter") || text.includes("imes") || text.includes("ai") || text.includes("ober") || text.includes("ufat");
 }
 
@@ -80,8 +78,7 @@ function btnCopiarr() {
 }
 
 function esconderElementosMensagem() {
-    // Oculta o título, parágrafo e a imagem do boneco dentro do container de mensagens
     tituloMensagem.style.display = "none";
     paragrafoMensagem.style.display = "none";
-    imagem.style.display = "none"; // Oculta a imagem do boneco
+    imagem.style.display = "none"; 
 }
